@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 
 const Layout = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +9,7 @@ const Layout = ({ children }) => {
 
     return (
         <div className=" min-h-screen bg-primary">
-            <div className="border-b-[1px] fixed top-0 w-full z-10 border-secondary bg-primary py-4 flex items-center  justify-between gap-6 px-10 md:px-20">
+            <div className="border-b-[1px] fixed top-0 w-full z-10 border-secondary bg-nav backdrop-blur-sm py-4 flex items-center  justify-between gap-6 px-10 md:px-20">
                 <h2 className="text-white font-bold text-xl tracking-wider hidden sm:block">
                     LanguageOwl
                 </h2>
@@ -37,7 +36,7 @@ const Layout = ({ children }) => {
                         />
                         <p className="text-lg font-bold text-white">9</p>
                     </div>
-                    <div className=" rounded-full profile-pic h-10 w-10 bg-secondary"></div>
+                    <div className=" rounded-full profile-pic h-10 w-10 bg-secondary "></div>
                 </div>
                 <button onClick={toggleMenu} className={isOpen ? "hamburger active" : "hamburger"}>
                     <div className="bar"></div>
@@ -98,7 +97,7 @@ const Layout = ({ children }) => {
                         </h3>
                     </div>
                 </div>
-                <div className=" sm:ml-[20%] w-full sm:w-[80%] lg:w-[50%] bg-white pt-40">
+                <div className=" sm:ml-[20%] w-full sm:w-[80%] lg:w-[50%] pt-40">
                     {children}
                 </div>
                 <div className="w-[30%] px-14 hidden lg:block fixed right-0 top-0 mt-40 h-screen">
