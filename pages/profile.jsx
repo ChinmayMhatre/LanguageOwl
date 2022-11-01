@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 
-const Profile = () => {
+const profile = () => {
     return (
         <Layout>
             <div>Profile</div>
@@ -9,4 +9,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default profile;

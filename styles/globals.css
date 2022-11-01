@@ -2,3 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+@media(max-width: 640px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-menu{
+        display:block;
+        left: -100%;
+        transition: 0.3s;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+
+}
+
+
+
